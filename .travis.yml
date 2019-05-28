@@ -2,8 +2,8 @@ sudo: required
 services: 
   - docker
 
-before_insall:
-  - docker build -t docker-react -f Dockerfile.dev . 
+before_install:
+  - docker build -t ranew/docker-react -f Dockerfile.dev . 
 
 script:
-  - docker run docker-react npm run test -- --coverage
+  - docker run ranew/docker-react npm run test -- --coverage
